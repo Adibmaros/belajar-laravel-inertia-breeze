@@ -18,7 +18,6 @@ class RoleMiddleware
         if (!$request->user() || $request->user()->role !== $role) {
         return redirect('/')->with('error', 'Anda tidak punya akses ke halaman ini.');
     }
-
     return $next($request);
     }
 }
